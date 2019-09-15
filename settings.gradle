@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':lib_common_ui', ':lib_audio', ':lib_video', ':lib_network', ':lib_image_loader', ':lib_update', ':lib_pullalive', ':lib_webview', ':lib_qrcode', ':lib_share'
 rootProject.name='Imooc_Voice'
