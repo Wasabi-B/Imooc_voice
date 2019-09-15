@@ -1,14 +1,15 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion this.rootProject.android.compileSdkVersion
     defaultConfig {
-        applicationId "com.zoub.imooc_voice"
-        minSdkVersion 19
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        applicationId this.rootProject.android.applicationId
+        minSdkVersion this.rootProject.android.minSdkVersion
+        targetSdkVersion this.rootProject.android.targetSdkVersion
+        versionCode this.rootProject.android.versionCode
+        versionName this.rootProject.android.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -20,7 +21,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation this.rootProject.depsLib.appcompat
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

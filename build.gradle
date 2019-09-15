@@ -1,9 +1,24 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
+apply from: this.rootProject.file('imooc_voice.gradle')
 buildscript {
     repositories {
         google()
         jcenter()
+        mavenCentral()
+        maven {
+            url 'http://localhost:8081/repository/imooc-releases/'
+            credentials{
+                username 'admin'
+                password 'xiongdi123'
+            }
+        }
+        maven {
+            url 'http://localhost:8081/repository/imooc-snapshots/'
+            credentials{
+                username 'admin'
+                password 'xiongdi123'
+            }
+        }
         
     }
     dependencies {
@@ -18,7 +33,21 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        mavenCentral()
+        maven {
+            url 'http://localhost:8081/repository/imooc-releases/'
+            credentials{
+                username 'admin'
+                password 'xiongdi123'
+            }
+        }
+        maven {
+            url 'http://localhost:8081/repository/imooc-snapshots/'
+            credentials{
+                username 'admin'
+                password 'xiongdi123'
+            }
+        }
     }
 }
 
